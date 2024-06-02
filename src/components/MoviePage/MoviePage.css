@@ -63,7 +63,7 @@
 #fullCastCrewModal .modal-body{
     padding-left:0px;
     padding-right: 0px;
-    
+
     --scrollbarBG: rgba(var(--fg-color), 0.1);
     --thumbBG: rgba(var(--fg-color), 0.8);
     scrollbar-width: thin;
@@ -83,7 +83,7 @@
     padding: 8px 10px;
 }
 #fullCastCrewModal .modal-body li:nth-child(odd){
-    background-color: rgba(var(--fg-color), 0.03);        
+    background-color: rgba(var(--fg-color), 0.03);
 }
 
 #fullCastCrewModal li{
@@ -115,20 +115,20 @@
 .more-cast-btn:focus, .more-cast-btn:hover{
     outline:none;
     color: rgba(var(--fg-color), 0.85);
-} 
+}
 .video-list{
     height: 250px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    overflow-x: auto;  
-    overflow-y: hidden;  
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 .video-list > div{
     margin-left: 20px;
 }
 @media only screen and (max-width: 576px){
-    
+
     #fullCastCrewModal .list-heading{
         margin-left: 0px;
         margin-right: 0px;
@@ -144,7 +144,7 @@
     .movie-page_dashboard-info{
         text-align: left;
         align-items: start;
-        justify-content: flex-end;        
+        justify-content: flex-end;
     }
 }
 

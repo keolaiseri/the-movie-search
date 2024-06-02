@@ -8,7 +8,7 @@ import MoviePage from "./components/MoviePage/MoviePage";
 import MovieSearchPage from "./components/MovieSearchPage/MovieSearchPage";
 
 
-const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+const API_KEY = '41d8229bafe7fea5dbeccefcf7565a60'
 
 function App() {
   const trendingData = useCachedApiCall(API_KEY, "https://api.themoviedb.org/3");
@@ -23,7 +23,7 @@ function App() {
         <main>
           <Switch>
             <Route exact path="/" render={props=><HomePage {...props} trendingData={trendingData}/>}/>
-            <Route exact path="/:media_type/:id" 
+            <Route exact path="/:media_type/:id"
                   render={(props)=>{
                       switch(props.match.params.media_type){
                         case "movie":
@@ -35,11 +35,11 @@ function App() {
                   }}
             />
             <Route exact path="/search" render={props=><MovieSearchPage {...props} movieSearch={movieSearch}/>}/>
-          </Switch>       
+          </Switch>
         </main>
       </div>
     </Router>
-    
+
   );
 }
 

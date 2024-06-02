@@ -1,0 +1,21 @@
+.navbar.navbar-dark.navbar-expand-sm {
+    background-color: #1a1a1a; /* Change the color to your preference */
+    border: none; /* Remove the border */
+}
+
+.navbar.navbar-dark.navbar-expand-sm .navbar-brand {
+    color: #fff; /* Change the color to your preference */
+    font-size: 24px; /* Change the font size to your preference */
+    font-weight: bold; /* Change the font weight to your preference */
+    letter-spacing: 2px; /* Change the letter spacing to your preference */
+}
+
+.navbar.navbar-dark.navbar-expand-sm .nav-link {
+    font-size: 18px; /* Change the font size to your preference */
+    padding: 10px 15px; /* Change the padding to your preference */
+    transition: color 0.3s ease; /* Change the transition to your preference */
+}
+
+.navbar.navbar-dark.navbar-expand-sm .nav-link:hover {
+    color: #1abc9c; /* Change the color to your preference */
+}

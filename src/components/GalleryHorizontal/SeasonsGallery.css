@@ -13,3 +13,92 @@
     font-weight: bold;
     font-size: 12px;
 }
+
+.gallery-h-scrollarea{
+    padding: 20px;
+    display:flex;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-x:auto;
+
+    scroll-snap-type: x proximity;
+    scroll-padding: 20px;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.gallery-h-scrollarea::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-h{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-h-scrollarea > *{
+    margin: 0px 20px;
+    scroll-snap-align: start;
+}
+
+.gallery-h-scrollarea::before, .gallery-h-scrollarea::after{
+    content: "";
+    padding-left: 40px;
+}
+
+.gallery-h-scrollarea::before{
+    scroll-snap-align: start;
+}
+
+.gallery-h-scrollarea::after{
+    scroll-snap-align: end;
+}
+
+.gallery-h > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.gallery-h > button:focus{
+    outline: none;
+}
+
+.gallery-h > button:hover{
+    background-color: #0056b3;
+}
+
+.gallery-h > button.selected{
+    background-color: #343a40;
+}
+
+.gallery-left-arrow, .gallery-right-arrow{
+    color: black;
+}
+
+@media only screen and (min-width: 768px){
+    .gallery-h-scrollarea{
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .gallery-h-scrollarea > div{
+        max-width: 800px;
+    }
+}
+
+.homepage {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}

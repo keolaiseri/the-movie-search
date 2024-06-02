@@ -17,88 +17,75 @@
   --dark-color: 10, 14, 30;
 
   --fine-line-color-rgba: rgba(var(--fg-color), 0.08);
-
 }
 
 body{
-  background-image: linear-gradient(90deg, var(--bg-color-1-rgb),var(--bg-color-2-rgb) 75%);
-  color: var(--fg-color-rgb);
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.app-header{
-  text-align: center;
-  padding: 10px;
+.homepage {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.movie-grid{
+.section {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.section-heading {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.movie-grid > div{
-  margin: 25px 30px;
-}
-
-
-.error-msg{
-  color: rgba(var(--fg-color), 0.35);
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  margin-top: 1.5em;
-}
-
-.link-nostyle, .link-nostyle:link, .link-nostyle:hover{
-  text-decoration: none;
-  
-}
-
-.poster{
-  background-color: rgb(var(--dark-color));
-  width: 154px;
-  height: 231px;
-} 
-.poster > img{
-  width: 154px;
-  height: 231px;
-  object-fit: contain;
-}
-
-.poster-bg{
-  width: 185px;
-  height: 278px;
-  margin: 15px;
-  background-color: rgb(var(--dark-color));
-}
-.poster-bg > img{
-  width: 185px;
-  height: 278px;
-  object-fit: contain;
-}
-
-.poster:empty::after, .poster-bg:empty::after{
-  content: "N/A";
-  color: rgba(var(--fg-color), 0.5);
-  font-size: 18px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-.section{
-  margin: 60px 20px;
-}
-.section-heading{
-  color: var(--fg-color-rgb);
+.section-heading > div {
   font-size: 24px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--fine-line-color-rgba);
-  margin-bottom: 16px;
+  font-weight: bold;
 }
 
-@media only screen and (min-width: 576px){
-  .section{
-    margin: 60px 40px;
-  }
+.section-heading select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.section-heading .btn-group {
+  display: flex;
+}
+
+.section-heading .btn-group .btn {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border: none;
+  color: white;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.section-heading .btn-group .btn:hover {
+  background-color: #0056b3;
+}
+
+.section-heading .btn-group .btn.selected {
+  background-color: #343a40;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-title {
+  color: black;
+}
+
+.navbar.navbar-dark.navbar-expand-sm {
+  border: none; /* This will remove the border */
 }
