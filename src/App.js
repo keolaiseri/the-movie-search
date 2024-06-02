@@ -8,8 +8,7 @@ import MoviePage from "./components/MoviePage/MoviePage";
 import MovieSearchPage from "./components/MovieSearchPage/MovieSearchPage";
 
 
-const API_KEY = '41d8229bafe7fea5dbeccefcf7565a60'
-
+const API_KEY = process.env.REACT_APP_API_KEY;
 function App() {
   const trendingData = useCachedApiCall(API_KEY, "https://api.themoviedb.org/3");
   const movieSearch = useMovieSearch();

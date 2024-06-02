@@ -3,7 +3,8 @@ import useCachedApiCall from "./useCachedApiCall";
 
 
 export default function(){
-    const API_KEY = '41d8229bafe7fea5dbeccefcf7565a60';
+
+    const API_KEY = process.env.REACT_APP_API_KEY;
 
     const [mediaType, setMediaType] = useState("movie");
     const [searchQuery, setSearchQuery] = useState("");
